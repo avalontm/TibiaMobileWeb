@@ -1,0 +1,60 @@
+﻿<!--- Sidemenu -->
+<div>
+    <div class="download">
+        <a href="https://avalontm.itch.io/tibiamobile" class="btn btn-primary btn-lg btn-block" role="button" aria-pressed="true">Descargar</a>
+    </div>
+
+    <div class="menujq">
+        <ul>
+            <li>
+                <a href="javascript:void(0)">Noticias</a>
+                <ul>
+                    <li><a href="/noticias">Ultimas Noticias</a></li>
+                    <li><a href="/eventos">Eventos</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="javascript:void(0)">Libreria</a>
+                <ul>
+                    <li><a href="/creaturas">Creaturas</a></li>
+                    <li><a href="/magias">Magias</a></li>
+                    <li><a href="/misiones">Misiones</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="javascript:void(0)">Comunidad</a>
+                <ul>
+                    <li><a href="/personajes">Personajes</a></li>
+                    <li><a href="/estadisticas">Estadisticas</a></li>
+                    <li><a href="/muertes">Estadisticas de muertes</a></li>
+                </ul>
+            </li>
+
+        </ul>
+    </div>
+</div>
+<!-- Sidebar -->
+
+@using (Html.BeginScripts())
+{
+    <script>
+        $(document).ready(function () {
+            $('.menujq > ul > li:has(ul)').addClass('desplegable');
+            $('.menujq > ul > li > a').click(function () {
+                var comprobar = $(this).next();
+                $('.menujq li').removeClass('activa');
+                $(this).closest('li').addClass('activa');
+                if ((comprobar.is('ul')) && (comprobar.is(':visible'))) {
+                    $(this).closest('li').removeClass('activa');
+                    comprobar.slideUp('normal');
+                }
+                if ((comprobar.is('ul')) && (!comprobar.is(':visible'))) {
+                    $('.menujq ul ul:visible').slideUp('normal');
+                    comprobar.slideDown('normal');
+                }
+            });
+        });
+    </script>
+}

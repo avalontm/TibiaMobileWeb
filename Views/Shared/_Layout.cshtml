@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - TibiaMobile</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+
+</head>
+
+<body>
+    <div class="flex-container">
+        <header>
+            <!-- Header -->
+            <partial name="_Header" />
+        </header>
+        <section class="menu-section">
+            <!-- Left Nav -->
+            <partial name="_Menu" />
+        </section>
+        <section class="main-section">
+            @RenderBody()
+        </section>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @Html.PageScripts()
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
