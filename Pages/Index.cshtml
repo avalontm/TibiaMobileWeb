@@ -1,0 +1,53 @@
+﻿@page
+@model TibiaMobileWeb.Views.Home.IndexModel
+@using TibiaMobileWeb.DataBase.Tables;
+
+@{
+    Layout = "_Layout";
+    int index = 0;
+}
+
+<div class="text-center">
+    <p>Estadisticas</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Rango
+                </th>
+                <th>
+                    Nombre
+                </th>
+                <th>
+                    Level
+                </th>
+                <th>
+                    Experiencia
+                </th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (Players player in Model.players)
+            {
+                index++;
+                <tr>
+                    <td>
+                        <p>@index</p>
+                    </td>
+                    <td>
+                        <p>@player.name</p>
+                    </td>
+                    <td>
+                        <p>@player.level</p>
+                    </td>
+                    <td>
+                        <p>@player.experience</p>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>

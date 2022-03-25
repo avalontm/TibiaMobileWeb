@@ -26,6 +26,7 @@ namespace TibiaMobileWeb
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>().UseApplicationInsights().UseKestrel(options => options.ConfigureEndpoints());
+                    
                 });
     }
 
