@@ -1,0 +1,70 @@
+﻿@page "{name}"
+@model TibiaMobileWeb.Pages.Player.IndexModel
+@{
+    Layout = "_Layout";
+}
+
+<div class="page-section">
+    <div class="page-header">
+        <h2>Character Information</h2>
+    </div>
+
+    <table>
+        <tbody>
+
+            <tr>
+                <td>
+                    <p>Name</p>
+                </td>
+                <td>
+                    <p>@Model.player.name</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p>Sex</p>
+                </td>
+                <td>
+                    <p>@Model.player.sex</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p>Vocation</p>
+                </td>
+                <td>
+                    <p>@Model.player.vocation</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p>Level</p>
+                </td>
+                <td>
+                    <p>@Model.player.level</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p>Last Login</p>
+                </td>
+                <td>
+                    <p>@Model.player.last_login.ToString("MMM dd yyyy, HH:MM:ss") CET</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p>Account Status</p>
+                </td>
+                <td>
+                    <p>@Model.player.beta</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

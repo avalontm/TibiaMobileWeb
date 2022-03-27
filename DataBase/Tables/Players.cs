@@ -43,6 +43,11 @@ namespace TibiaMobileWeb.DataBase.Tables
             return MYSQL.Query<Players>($"SELECT * FROM players WHERE id='{player_id}'").FirstOrDefault();
         }
 
+        public static Players Get(string player_name)
+        {
+            return MYSQL.Query<Players>($"SELECT * FROM players WHERE name='{player_name}'").FirstOrDefault();
+        }
+
         public static List<Players> Gets(PlayerOrder order, int limit = 20)
         {
             string _order = string.Empty;

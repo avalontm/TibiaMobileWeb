@@ -55,10 +55,12 @@ namespace TibiaMobileWeb
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();
+                endpoints.MapControllers();
+                endpoints.MapControllerRoute(name: "default", pattern: "{controller=Image}/{action=Outfit}/{id?}");
             });
 
             //Iniciando
-            MYSQL.Init(Configuration["ConnectionStrings:DefaultConnection"]);
+            MYSQL.Init(Configuration["Mysql:Server"],int.Parse(Configuration["Mysql:Port"]), Configuration["Mysql:User"], Configuration["Mysql:Password"], Configuration["Mysql:DataBase"]);
 
             Thread.CurrentThread.CurrentCulture = new CultureInfo("es-ES");
 
@@ -74,6 +76,8 @@ namespace TibiaMobileWeb
             var appSettingsSection = Configuration.GetSection("AppSettings");
             var appSettings = appSettingsSection.Get<AppSettings>();
             PushNotification.KEY = appSettings.FMCToken;
+
+            Colors.Init();
 
             Console.WriteLine("[FMCToken] " + PushNotification.KEY);
             Console.WriteLine("[MYSQL] " + MYSQL.connectionString);

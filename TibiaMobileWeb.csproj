@@ -6,14 +6,18 @@
 
   <ItemGroup>
     <PackageReference Include="FCM.Net.Core" Version="1.0.1" />
-    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.16.0" />
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.20.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
-    <PackageReference Include="MySql.Data" Version="8.0.22" />
-    <PackageReference Include="PluginSQL" Version="1.0.1" />
+    <PackageReference Include="MonoGame.Framework.Portable" Version="3.7.1.189" />
+    <PackageReference Include="MySql.Data" Version="8.0.28" />
+    <PackageReference Include="PluginSQL" Version="1.0.7" />
+    <PackageReference Include="SixLabors.ImageSharp" Version="2.1.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <Reference Include="TMFormat">
+      <HintPath>..\TMFormat\TMFormat\bin\Release\netstandard2.0\TMFormat.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>
