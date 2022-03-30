@@ -79,8 +79,18 @@
     </div>
 
     <section class="home-section">
-        @RenderBody()
-    </section>
+        <div id="Bodycontainer" class="Content">
+            <div id="ContentColumn">
+                <div class="Content">
+                    <div id="ContentHelper">
+                        <div class="BoxContent">
+                            @RenderBody()
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</section>
 
     <script>
         let sidebar = document.querySelector(".sidebar");

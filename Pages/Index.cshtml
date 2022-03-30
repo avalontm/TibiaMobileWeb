@@ -7,12 +7,11 @@
     int index = 0;
 }
 
-<div class="page-section">
-    <div class="page-header">
-        <h2>Estadisticas</h2>
-    </div>
-   
-    <table>
+
+<h2>Estadisticas</h2>
+
+<div class="TableContentContainer">
+    <table class="TableContainer TableContent">
         <thead>
             <tr>
                 <th>
@@ -39,19 +38,19 @@
                 index++;
                 <tr>
                     <td>
-                        <p>@index</p>
+                        @index
                     </td>
                     <td>
-                        <img src="/image/outfit?look=@player.look&head=@player.head&body=@player.body&legs=@player.legs&feet=@player.feet"/>
+                        <img src="/image/outfit?look=@player.look&head=@player.head&body=@player.body&legs=@player.legs&feet=@player.feet" />
                     </td>
                     <td>
-                      <a href="/player/@player.name"><p><b>@player.name</b></p></a>  
+                        <a href="/player/@player.name">@player.name</a>
                     </td>
                     <td>
-                        <p>@player.level</p>
+                       @player.level
                     </td>
                     <td>
-                        <p>@player.experience</p>
+                        @player.experience
                     </td>
                 </tr>
             }
