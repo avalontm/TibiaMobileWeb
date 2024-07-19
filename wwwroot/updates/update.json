@@ -1,0 +1,50 @@
+{
+  "version": "1.0.25",
+  "host": "http://192.168.100.2/update/file?url=",
+  "items": [
+    {
+      "crc32": "F4EE1F4C63FEE2D68907571542E98B68",
+      "file": "items.tmi"
+    },
+    {
+      "crc32": "2F30264C623E48EC8C705647465A6284",
+      "file": "creatures/chr_11.tmc"
+    },
+    {
+      "crc32": "1446A7E0F59F68A964A633AC70CE01B2",
+      "file": "creatures/chr_128.tmc"
+    },
+    {
+      "crc32": "0F889CFA82E3DA24364AE7877D7398C3",
+      "file": "creatures/chr_131.tmc"
+    },
+    {
+      "crc32": "378C29CA71C5637F23A95BACC8210342",
+      "file": "creatures/chr_133.tmc"
+    },
+    {
+      "crc32": "02E50AF9ECE29C049979A69DD4D27471",
+      "file": "creatures/chr_134.tmc"
+    },
+    {
+      "crc32": "DB55793E02B5484A1493390CED536804",
+      "file": "creatures/chr_136.tmc"
+    },
+    {
+      "crc32": "FC2E223A8986FCBE5A31C7078A44E03D",
+      "file": "creatures/chr_137.tmc"
+    },
+    {
+      "crc32": "8FC301481CF95849E1CF1E2D1DECFB33",
+      "file": "creatures/chr_138.tmc"
+    },
+    {
+      "crc32": "14825EC201158A55143380AFAB632556",
+      "file": "creatures/chr_141.tmc"
+    },
+    {
+      "crc32": "C44AA037A1323DE8ACB53E1953506D34",
+      "file": "creatures/chr_142.tmc"
+    }
+  ]
+}

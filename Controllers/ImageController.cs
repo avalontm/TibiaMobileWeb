@@ -1,18 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.Xna.Framework.Graphics;
 using SixLabors.ImageSharp;
-using SixLabors.ImageSharp.Formats;
-using SixLabors.ImageSharp.Formats.Bmp;
-using SixLabors.ImageSharp.Formats.Gif;
-using SixLabors.ImageSharp.Formats.Png;
 using SixLabors.ImageSharp.PixelFormats;
-using SixLabors.ImageSharp.Processing;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
 using TMFormat.Formats;
 
 namespace TibiaMobileWeb.Controllers

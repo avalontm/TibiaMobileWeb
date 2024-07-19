@@ -57,6 +57,7 @@ namespace TibiaMobileWeb
                 endpoints.MapRazorPages();
                 endpoints.MapControllers();
                 endpoints.MapControllerRoute(name: "default", pattern: "{controller=Image}/{action=Outfit}/{id?}");
+                endpoints.MapControllerRoute(name: "update", pattern: "{controller=Update}/{action=File}/{url?}");
             });
 
             //Iniciando
@@ -78,6 +79,9 @@ namespace TibiaMobileWeb
             PushNotification.KEY = appSettings.FMCToken;
 
             Colors.Init();
+
+
+            ServiceUpdate.Generate();
 
             Console.WriteLine("[FMCToken] " + PushNotification.KEY);
             Console.WriteLine("[MYSQL] " + MYSQL.connectionString);
